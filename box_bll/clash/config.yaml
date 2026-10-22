@@ -122,7 +122,7 @@ tun:
     - any:53
     - tcp://any:53
   udp-timeout: 300
-  endpoint-independent-nat: true # UDP 全锥形 NAT：游戏联机 / P2P / 语音通话
+  endpoint-independent-nat: true # UDP 全锥形 NAT：新内核 mips/gvisor 栈已默认如此，此项只对旧内核生效
   auto-route: true
   auto-redirect: false
   auto-detect-interface: true
@@ -152,7 +152,7 @@ dns:
   ipv6: true
   listen: 0.0.0.0:1053
   fake-ip-range: 198.18.0.0/16
-  fake-ip-range6: fdfe:dcba:9876::/64
+  # 不设 fake-ip-range6：box.iptables 将 fc00::/7（含 fdfe:dcba:9876::/64）视为内网直接放行，IPv6 假地址会绕过 TPROXY 导致连接失败
   enhanced-mode: fake-ip # redir-host
   fake-ip-filter:
     - "RULE-SET:CN_域"
