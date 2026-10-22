@@ -44,7 +44,7 @@ p: &p
     url: https://www.gstatic.com/generate_204
     interval: 300
     expected-status: 204 # 只认真正的 204，被劫持返回拦截页的节点不算可用
-  proxy: 订阅更新
+  proxy: 🔄 订阅更新
   header: # 如遇订阅加载不出来请切换ua
       User-Agent:  # 使用注释法由上到下 默认使用第一个
         - "ClashMetaForAndroid/2.11.2.Meta"
@@ -187,12 +187,12 @@ dns:
       - https://223.5.5.5:443/dns-query#🌐 本机·本地直连&h3=true
       - https://223.6.6.6:443/dns-query#🌐 本机·本地直连&h3=true
   nameserver:
-    # Google
-    - https://8.8.8.8:443/dns-query#DNS连接&h3=true
-    - https://8.8.4.4:443/dns-query#DNS连接&h3=true
+    # 🔍 Google
+    - https://8.8.8.8:443/dns-query#🧭 DNS连接&h3=true
+    - https://8.8.4.4:443/dns-query#🧭 DNS连接&h3=true
     # Cloudflare
-    - https://1.1.1.1:443/dns-query#DNS连接&h3=false
-    - https://1.0.0.1:443/dns-query#DNS连接&h3=false
+    - https://1.1.1.1:443/dns-query#🧭 DNS连接&h3=false
+    - https://1.0.0.1:443/dns-query#🧭 DNS连接&h3=false
   # 直连流量的解析：国内 DoH，防运营商劫持，CDN 就近
   direct-nameserver:
     - https://1.12.12.12:443/dns-query#🌐 本机·本地直连&h3=false
@@ -208,188 +208,188 @@ proxies:
 proxy_groups: &proxy_groups
     type: select
     proxies:
-      - 总模式
-      - ALL·延迟最低
-      - ALL·负载均衡
-      - ALL·故障转移
-      - ALL·中国台湾
-      - ALL·香港地区
-      - ALL·美国地区
-      - ALL·日本地区
-      - ALL·狮城地区
-      - ALL·其它地区
+      - 🚀 总模式
+      - ⚡ ALL·延迟最低
+      - ⚖️ ALL·负载均衡
+      - 🔁 ALL·故障转移
+      - 🇹🇼 ALL·台湾地区
+      - 🇭🇰 ALL·香港地区
+      - 🇺🇸 ALL·美国地区
+      - 🇯🇵 ALL·日本地区
+      - 🇸🇬 ALL·狮城地区
+      - 🌐 ALL·其它地区
       - ⛔️ 禁止·拒绝连接
       - 🌐 本机·本地直连
     <<: *A
 # —————————
 proxy-groups:
-  - name: 总模式
+  - name: 🚀 总模式
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@main/app/icon/All.svg" # SurfingTile 按名称/此图标识别总模式，勿改
     type: select
     proxies:
-      - ALL·延迟最低
-      - ALL·负载均衡
-      - ALL·故障转移
-      - ALL·日本地区
-      - ALL·中国台湾
-      - ALL·香港地区  
-      - ALL·美国地区
-      - ALL·狮城地区
-      - ALL·其它地区
+      - ⚡ ALL·延迟最低
+      - ⚖️ ALL·负载均衡
+      - 🔁 ALL·故障转移
+      - 🇯🇵 ALL·日本地区
+      - 🇹🇼 ALL·台湾地区
+      - 🇭🇰 ALL·香港地区  
+      - 🇺🇸 ALL·美国地区
+      - 🇸🇬 ALL·狮城地区
+      - 🌐 ALL·其它地区
       - 🌐 本机·本地直连
-  - name: 订阅更新
+  - name: 🔄 订阅更新
     icon: "https://cdn.jsdmirror.com/gh/GitMetaio/Surfing@main/app/icon/Update.svg"
     type: select
     proxies:
       - 🌐 本机·本地直连
-      - 总模式
-  - name: 小红书
+      - 🚀 总模式
+  - name: 📕 小红书
     icon: "https://cdn.jsdmirror.com/gh/GitMetaio/Surfing@main/app/icon/XiaoHongShu.svg"
     <<: *proxy_groups
     proxies: # 国内应用默认直连
       - 🌐 本机·本地直连
-      - 总模式
-      - ALL·延迟最低
-      - ALL·负载均衡
-      - ALL·故障转移
-      - ALL·中国台湾
-      - ALL·香港地区
-      - ALL·美国地区
-      - ALL·日本地区
-      - ALL·狮城地区
-      - ALL·其它地区
+      - 🚀 总模式
+      - ⚡ ALL·延迟最低
+      - ⚖️ ALL·负载均衡
+      - 🔁 ALL·故障转移
+      - 🇹🇼 ALL·台湾地区
+      - 🇭🇰 ALL·香港地区
+      - 🇺🇸 ALL·美国地区
+      - 🇯🇵 ALL·日本地区
+      - 🇸🇬 ALL·狮城地区
+      - 🌐 ALL·其它地区
       - ⛔️ 禁止·拒绝连接
-  - name: 抖音
+  - name: 🎵 抖音
     icon: "https://cdn.jsdmirror.com/gh/GitMetaio/Surfing@main/app/icon/DouYin.svg"
     <<: *proxy_groups
     proxies: # 国内应用默认直连
       - 🌐 本机·本地直连
-      - 总模式
-      - ALL·延迟最低
-      - ALL·负载均衡
-      - ALL·故障转移
-      - ALL·中国台湾
-      - ALL·香港地区
-      - ALL·美国地区
-      - ALL·日本地区
-      - ALL·狮城地区
-      - ALL·其它地区
+      - 🚀 总模式
+      - ⚡ ALL·延迟最低
+      - ⚖️ ALL·负载均衡
+      - 🔁 ALL·故障转移
+      - 🇹🇼 ALL·台湾地区
+      - 🇭🇰 ALL·香港地区
+      - 🇺🇸 ALL·美国地区
+      - 🇯🇵 ALL·日本地区
+      - 🇸🇬 ALL·狮城地区
+      - 🌐 ALL·其它地区
       - ⛔️ 禁止·拒绝连接
-  - name: BiliBili
+  - name: 📺 BiliBili
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/bilibili.png"
     <<: *proxy_groups
     proxies: # 国内应用默认直连
       - 🌐 本机·本地直连
-      - 总模式
-      - ALL·延迟最低
-      - ALL·负载均衡
-      - ALL·故障转移
-      - ALL·中国台湾
-      - ALL·香港地区
-      - ALL·美国地区
-      - ALL·日本地区
-      - ALL·狮城地区
-      - ALL·其它地区
+      - 🚀 总模式
+      - ⚡ ALL·延迟最低
+      - ⚖️ ALL·负载均衡
+      - 🔁 ALL·故障转移
+      - 🇹🇼 ALL·台湾地区
+      - 🇭🇰 ALL·香港地区
+      - 🇺🇸 ALL·美国地区
+      - 🇯🇵 ALL·日本地区
+      - 🇸🇬 ALL·狮城地区
+      - 🌐 ALL·其它地区
       - ⛔️ 禁止·拒绝连接
-  - name: Steam
+  - name: 🎮 Steam
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Steam.png"
     <<: *proxy_groups
-  - name: 游戏平台
+  - name: 🕹️ 游戏平台
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Game.png"
     <<: *proxy_groups
-  - name: Apple
+  - name: 🍎 Apple
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
     <<: *proxy_groups
-  - name: Microsoft
+  - name: 🪟 Microsoft
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
     <<: *proxy_groups
-  - name: Telegram
+  - name: ✈️ Telegram
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"
     <<: *proxy_groups
-  - name: Discord
+  - name: 💬 Discord
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Discord.png"
     <<: *proxy_groups
-  - name: Spotify
+  - name: 🎧 Spotify
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Spotify.png"
     <<: *proxy_groups
-  - name: TikTok
+  - name: 🎶 TikTok
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"
     <<: *proxy_groups
-  - name: YouTube
+  - name: ▶️ YouTube
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
     <<: *proxy_groups
-  - name: Netflix
+  - name: 🎬 Netflix
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
     <<: *proxy_groups
-  - name: Disney+
+  - name: 🏰 Disney+
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Disney+.png"
     <<: *proxy_groups
-  - name: 海外媒体
+  - name: 📡 海外媒体
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"
     <<: *proxy_groups
-  - name: 巴哈姆特
+  - name: 🎌 巴哈姆特
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png"
     <<: *proxy_groups
     proxies: # 默认台湾
-      - ALL·中国台湾
-      - 总模式
-      - ALL·延迟最低
-      - ALL·负载均衡
-      - ALL·故障转移
-      - ALL·香港地区
-      - ALL·美国地区
-      - ALL·日本地区
-      - ALL·狮城地区
-      - ALL·其它地区
+      - 🇹🇼 ALL·台湾地区
+      - 🚀 总模式
+      - ⚡ ALL·延迟最低
+      - ⚖️ ALL·负载均衡
+      - 🔁 ALL·故障转移
+      - 🇭🇰 ALL·香港地区
+      - 🇺🇸 ALL·美国地区
+      - 🇯🇵 ALL·日本地区
+      - 🇸🇬 ALL·狮城地区
+      - 🌐 ALL·其它地区
       - ⛔️ 禁止·拒绝连接
       - 🌐 本机·本地直连
-  - name: Google
+  - name: 🔍 Google
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
     <<: *proxy_groups
-  - name: GoogleFCM
+  - name: 📮 GoogleFCM
     icon: "https://cdn.jsdmirror.com/gh/GitMetaio/Surfing@main/app/icon/GoogleFCM.svg"
     <<: *proxy_groups
-  - name: Facebook
+  - name: 👥 Facebook
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Facebook.png"
     <<: *proxy_groups
-  - name: AI
+  - name: 🤖 AI
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/AI.png"
     <<: *proxy_groups
-  - name: GitHub
+  - name: 🐙 GitHub
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
     <<: *proxy_groups
-  - name: Twitter(X)
+  - name: 🐦 Twitter(X)
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/X.png"
     <<: *proxy_groups
-  - name: PayPal
+  - name: 💳 PayPal
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/PayPal.png"
     <<: *proxy_groups
-  - name: 加密货币
+  - name: 🪙 加密货币
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency.png"
     <<: *proxy_groups
     proxies: # 默认台湾
-      - ALL·中国台湾
-      - 总模式
-      - ALL·延迟最低
-      - ALL·负载均衡
-      - ALL·故障转移
-      - ALL·香港地区
-      - ALL·美国地区
-      - ALL·日本地区
-      - ALL·狮城地区
-      - ALL·其它地区
+      - 🇹🇼 ALL·台湾地区
+      - 🚀 总模式
+      - ⚡ ALL·延迟最低
+      - ⚖️ ALL·负载均衡
+      - 🔁 ALL·故障转移
+      - 🇭🇰 ALL·香港地区
+      - 🇺🇸 ALL·美国地区
+      - 🇯🇵 ALL·日本地区
+      - 🇸🇬 ALL·狮城地区
+      - 🌐 ALL·其它地区
       - ⛔️ 禁止·拒绝连接
       - 🌐 本机·本地直连
-  - name: Speedtest
+  - name: ⏱️ Speedtest
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
     <<: *proxy_groups
-  - name: DNS连接
+  - name: 🧭 DNS连接
     icon: "https://cdn.jsdmirror.com/gh/GitMetaio/Surfing@main/app/icon/DNS.svg"
     <<: *proxy_groups
-  - name: 漏网之鱼
+  - name: 🐟 漏网之鱼
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Final.png"
     <<: *proxy_groups
-  - name: 广告拦截
+  - name: 🛡️ 广告拦截
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Advertising.png"
     type: select
     proxies:
@@ -397,7 +397,7 @@ proxy-groups:
       - PASS
       - REJECT-DROP
       - 🌐 DNS_Hijack
-  - name: WebRTC
+  - name: 📞 WebRTC
     icon: "https://cdn.jsdmirror.com/gh/GitMetaio/Surfing@main/app/icon/WebRTC.svg"
     type: select
     proxies: # 默认放行：拦截会导致 Teams/Meet 通话与主机 NAT 检测失败
@@ -405,54 +405,54 @@ proxy-groups:
       - ⛔️ 禁止·拒绝连接
       - 🌐 DNS_Hijack
       - REJECT-DROP
-  - name: ALL·延迟最低
+  - name: ⚡ ALL·延迟最低
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
     type: url-test
     expected-status: 204
     <<: *A
-  - name: ALL·负载均衡
+  - name: ⚖️ ALL·负载均衡
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png"
     type: load-balance
     strategy: round-robin
     expected-status: 204
     <<: *A
-  - name: ALL·故障转移
+  - name: 🔁 ALL·故障转移
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Available.png"
     type: fallback
     expected-status: 204
     <<: *A
-  - name: ALL·日本地区
+  - name: 🇯🇵 ALL·日本地区
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
     filter: "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|jp|japan)"
     expected-status: 204
     <<: *All
-  - name: ALL·中国台湾
+  - name: 🇹🇼 ALL·台湾地区
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"
     filter: "(?i)(台|新北|彰化|tw|taiwan|taipei)"
     expected-status: 204
     <<: *All
-  - name: ALL·香港地区
+  - name: 🇭🇰 ALL·香港地区
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
     filter: "(?i)(港|hk|hong ?kong)"
     expected-status: 204
     <<: *All
-  - name: ALL·美国地区
+  - name: 🇺🇸 ALL·美国地区
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/United_States.png"
     filter: "(?i)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|us|united ?states)"
     expected-status: 204
     <<: *All
-  - name: ALL·狮城地区
+  - name: 🇸🇬 ALL·狮城地区
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/Singapore.png"
     filter: "(?i)(新加坡|坡|狮城|sg|singapore)"
     expected-status: 204
     <<: *All
-  - name: ALL·其它地区
+  - name: 🌐 ALL·其它地区
     icon: "https://cdn.jsdmirror.com/gh/Koolson/Qure@master/IconSet/Color/World_Map.png"
     filter: ".*"
     exclude-filter: "(?i)(港|hk|hong ?kong|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|jp|japan|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|us|united ?states|台|新北|彰化|tw|taiwan|taipei|新加坡|坡|狮城|sg|singapore|灾|网易|netease|套餐|重置|剩余|到期|订阅|群|账户|流量|有效期|时间|官网|拒绝|dns|ch|网址|售|防失)"
     expected-status: 204
     <<: *All
-  - name: 特殊地址
+  - name: 📌 特殊地址
     icon: "https://cdn.jsdmirror.com/gh/GitMetaio/Surfing@main/app/icon/User.svg"
     type: select
     url: https://www.baidu.com/favicon.ico
@@ -663,56 +663,56 @@ rules:
   - RULE-SET,Private_域,🌐 本机·本地直连
   - RULE-SET,Private_IP,🌐 本机·本地直连,no-resolve
   - DST-PORT,53,🌐 DNS_Hijack
-  - DST-PORT,853,DNS连接
-  - RULE-SET,自定义规则,特殊地址
-  - RULE-SET,WebRTC_端/域,WebRTC
-  - RULE-SET,GoogleFCM_域,GoogleFCM
-  - RULE-SET,YouTube_域,YouTube
-  - RULE-SET,Google_域,Google
-  - RULE-SET,Google_IP,Google,no-resolve
-  - RULE-SET,No-ads-all_域,广告拦截
-  - PROCESS-NAME,com.ss.android.ugc.aweme,抖音
-  - RULE-SET,DouYin_域,抖音
-  - PROCESS-NAME,com.xingin.xhs,小红书
-  - RULE-SET,XiaoHongShu_域,小红书
-  - PROCESS-NAME,tv.danmaku.bili,BiliBili
-  - RULE-SET,BiliBili_域,BiliBili
-  - RULE-SET,BiliBili_IP,BiliBili,no-resolve
+  - DST-PORT,853,🧭 DNS连接
+  - RULE-SET,自定义规则,📌 特殊地址
+  - RULE-SET,WebRTC_端/域,📞 WebRTC
+  - RULE-SET,GoogleFCM_域,📮 GoogleFCM
+  - RULE-SET,YouTube_域,▶️ YouTube
+  - RULE-SET,Google_域,🔍 Google
+  - RULE-SET,Google_IP,🔍 Google,no-resolve
+  - RULE-SET,No-ads-all_域,🛡️ 广告拦截
+  - PROCESS-NAME,com.ss.android.ugc.aweme,🎵 抖音
+  - RULE-SET,DouYin_域,🎵 抖音
+  - PROCESS-NAME,com.xingin.xhs,📕 小红书
+  - RULE-SET,XiaoHongShu_域,📕 小红书
+  - PROCESS-NAME,tv.danmaku.bili,📺 BiliBili
+  - RULE-SET,BiliBili_域,📺 BiliBili
+  - RULE-SET,BiliBili_IP,📺 BiliBili,no-resolve
   # 国内 CDN 下载（Steam/游戏/系统更新）直连，商店与登录仍走各自分组
   - RULE-SET,SteamCN_域,🌐 本机·本地直连
   - RULE-SET,GameCN_域,🌐 本机·本地直连
-  - RULE-SET,Steam_域,Steam
-  - RULE-SET,Game_域,游戏平台
-  - RULE-SET,GitHub_域,GitHub
-  - RULE-SET,Discord_域,Discord
-  - RULE-SET,TikTok_域,TikTok
-  - RULE-SET,Twitter_域,Twitter(X)
-  - RULE-SET,Twitter_IP,Twitter(X),no-resolve
-  - RULE-SET,Netflix_域,Netflix
-  - RULE-SET,Netflix_IP,Netflix,no-resolve
-  - RULE-SET,Disney_域,Disney+
-  - RULE-SET,HBO_域,海外媒体
-  - RULE-SET,PrimeVideo_域,海外媒体
-  - RULE-SET,Bahamut_域,巴哈姆特
-  - RULE-SET,Spotify_域,Spotify
-  - RULE-SET,Facebook_域,Facebook
-  - RULE-SET,Facebook_IP,Facebook,no-resolve
-  - RULE-SET,AI_域,AI
-  - RULE-SET,PayPal_域,PayPal
-  - RULE-SET,Crypto_域,加密货币
-  # 国内测速站（speedtest.cn / 高校测速）直连测本地宽带，其余测速站走 Speedtest 组
+  - RULE-SET,Steam_域,🎮 Steam
+  - RULE-SET,Game_域,🕹️ 游戏平台
+  - RULE-SET,GitHub_域,🐙 GitHub
+  - RULE-SET,Discord_域,💬 Discord
+  - RULE-SET,TikTok_域,🎶 TikTok
+  - RULE-SET,Twitter_域,🐦 Twitter(X)
+  - RULE-SET,Twitter_IP,🐦 Twitter(X),no-resolve
+  - RULE-SET,Netflix_域,🎬 Netflix
+  - RULE-SET,Netflix_IP,🎬 Netflix,no-resolve
+  - RULE-SET,Disney_域,🏰 Disney+
+  - RULE-SET,HBO_域,📡 海外媒体
+  - RULE-SET,PrimeVideo_域,📡 海外媒体
+  - RULE-SET,Bahamut_域,🎌 巴哈姆特
+  - RULE-SET,Spotify_域,🎧 Spotify
+  - RULE-SET,Facebook_域,👥 Facebook
+  - RULE-SET,Facebook_IP,👥 Facebook,no-resolve
+  - RULE-SET,AI_域,🤖 AI
+  - RULE-SET,PayPal_域,💳 PayPal
+  - RULE-SET,Crypto_域,🪙 加密货币
+  # 国内测速站（speedtest.cn / 高校测速）直连测本地宽带，其余测速站走 ⏱️ Speedtest 组
   - RULE-SET,SpeedtestCN_域,🌐 本机·本地直连
-  - RULE-SET,Speedtest_域,Speedtest
+  - RULE-SET,Speedtest_域,⏱️ Speedtest
   - RULE-SET,AppleCN_域,🌐 本机·本地直连
   - RULE-SET,MicrosoftCN_域,🌐 本机·本地直连
-  - RULE-SET,Apple_域,Apple
-  - RULE-SET,Apple_IP,Apple,no-resolve
-  - RULE-SET,Microsoft_域,Microsoft
-  - RULE-SET,Telegram_域,Telegram
-  - RULE-SET,Telegram_IP,Telegram,no-resolve
+  - RULE-SET,Apple_域,🍎 Apple
+  - RULE-SET,Apple_IP,🍎 Apple,no-resolve
+  - RULE-SET,Microsoft_域,🪟 Microsoft
+  - RULE-SET,Telegram_域,✈️ Telegram
+  - RULE-SET,Telegram_IP,✈️ Telegram,no-resolve
   # 境外域名直接走代理，免去 CN_IP 判断前的 DNS 解析
-  - RULE-SET,Global_域,总模式
+  - RULE-SET,Global_域,🚀 总模式
   - RULE-SET,CN_域,🌐 本机·本地直连
   - RULE-SET,CN_IP,🌐 本机·本地直连
-  - MATCH,漏网之鱼
+  - MATCH,🐟 漏网之鱼
 # —————————
